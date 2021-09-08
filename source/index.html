@@ -13,8 +13,8 @@
   <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font">
   <link rel="preload" href="fonts/CormorantGaramond-BoldItalic.woff2" as="font">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="body">
@@ -184,7 +184,7 @@
         </div>
       </section> -->
 
-      <section class="products products--index">
+      <!-- <section class="products products--index">
         <h2 class="block-heading">New In</h2>
         <a href="catalog.html" class="block-link">Shop Now</a>
 
@@ -258,7 +258,7 @@
                 <span>$ 115</span>
               </p>
             </div>
-          </div>
+          </div> -->
           <!-- <div class="pages pages--index">
             <ul>
               <li>
@@ -280,8 +280,8 @@
                 <a href="#">6</a>
             </ul>
           </div> -->
-        </div>
-      </section>
+        <!-- </div>
+      </section> -->
 
       <section class="blog">
         <h2 class="block-heading">Blog</h2>
@@ -451,30 +451,30 @@
 
   </footer>
 
-  <section class="modal">
-    <div class="wrap">
-      <button class="modal__close">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
-      <img src="./img/login-img.jpg" alt="Изображение украшений" width="430" height="180">
+  <section class="modal visually-hidden">
+    <button class="modal__close">
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+    <div class="login">
+      <img src="./img/login-img.jpg" alt="Изображение украшений" width="430" height="138">
       <h2>Log In</h2>
-      <form method="GET" action="#" class="modal__field">
+      <form method="GET" action="#" class="login__field">
         <label for="login-email">
           <input type="email" id="login-email" name="login-email" placeholder="Your E-mail">
         </label>
         <label for="">
           <input type="password" id="login-password" name="login-password" placeholder="Password">
         </label>
-        <button class="modal__button"></button></form>
-      <div class="links">
-        <a href="#" class="links__password">Forgot your password?</a>
-        <a href="#" class="links__account">Don’t have an account?</a>
-        <a href="#" class="links__enter">Sign up</a>
+        <button class="login__button">Log In</button></form>
+      <div class="login__links">
+        <a href="#" class="login__links-type modal__links-type--password">Forgot your password?</a>
+        <a href="#" class="login__links-type modal__links-type--account">Don’t have an account?</a>
+        <a href="#" class="login__links-type modal__links-type--enter">Sign up</a>
       </div>
     </div>
   </section>
 
-  <!-- <script src="https://unpkg.com/dom-focus-lock"></script> -->
+  <script src="https://unpkg.com/dom-focus-lock"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>

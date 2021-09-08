@@ -1,0 +1,156 @@
+.login {
+  width: 430px;
+  padding-bottom: 53px;
+  position: fixed;
+  background-color: $blog-background;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
+
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  h2 {
+    margin-top: 46px;
+    font-family: "Cormorant Garamond", "Arial", sans-serif;
+    font-size: 34px;
+    line-height: 130%;
+    color: $text-color;
+    text-align: center;
+  }
+
+  @media (max-height: $tablet-width) {
+    .wrap {
+      width: 442px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+
+    width: 270px;
+    padding-bottom: 38px;
+
+
+    img {
+      height: 84px;
+    }
+
+    h2 {
+      margin-top: 33px;
+      font-size: 24px;
+    }
+  }
+}
+
+.login__field {
+  padding: 4px 45px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  label {
+    width: 99%;
+  }
+
+  input {
+    width: 100%;
+    padding-bottom: 9px;
+    margin-bottom: 36px;
+
+    background-color: $blog-background;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    &::placeholder {
+      font-family: "Poppins", "Arial", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $data-color;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 4px 51px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 6px 15px;
+
+    input {
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.login__button {
+  width: 340px;
+  height: 68px;
+  margin-top: 33px;
+  color: $main-color;
+  background-color: $excretion-color;
+
+  @media (max-width: $mobile-width) {
+    width: 240px;
+    margin-top: 28px;
+  }
+}
+
+.login__links {
+  padding: 0 45px;
+  padding-top: 10px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+    padding-top: 10px;
+  }
+}
+
+.login__links-type {
+  font-size: 14px;
+  line-height: 21px;
+
+  &--account {
+    padding-left: 53px;
+    padding-right: 6px;
+    color: $data-color;
+  }
+
+  &--password {
+    position: absolute;
+    font-size: 12px;
+    line-height: 18px;
+    bottom: 202px;
+    right: 48px;
+    color: $data-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--account {
+      padding-left: 60px;
+    }
+
+    &--password {
+      right: 52px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--account {
+      padding-left: 8px;
+      padding-right: 2px;
+    }
+
+    &--password {
+      bottom: 178px;
+      right: 15px;
+    }
+  }
+}

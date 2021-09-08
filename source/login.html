@@ -33,7 +33,7 @@
         </svg>
       </a>
       <div class="purchases">
-        <a href="login.html" class="purchases__link purchases__link--login">Login</a>
+        <!-- <a href="login.html" class="purchases__link purchases__link--login">Login</a> -->
         <a href="#" class="purchases__link purchases__link--cart">
           <span>Cart 0</span>
           <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,23 @@
 
   <main class="main">
 
-
+    <div class="login">
+      <img src="./img/login-img.jpg" alt="Изображение украшений" width="430" height="138">
+      <h2>Log In</h2>
+      <form method="GET" action="#" class="login__field">
+        <label for="login-email">
+          <input type="email" id="login-email" name="login-email" placeholder="Your E-mail">
+        </label>
+        <label for="">
+          <input type="password" id="login-password" name="login-password" placeholder="Password">
+        </label>
+        <button class="login__button">Log In</button></form>
+      <div class="login__links">
+        <a href="#" class="login__links-type modal__links-type--password">Forgot your password?</a>
+        <a href="#" class="login__links-type modal__links-type--account">Don’t have an account?</a>
+        <a href="#" class="login__links-type modal__links-type--enter">Sign up</a>
+      </div>
+    </div>
 
   </main>
 
@@ -135,8 +151,7 @@
     </div>
   </footer>
 
-  <!-- <script src="https://unpkg.com/dom-focus-lock"></script>
-  <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,75 +1,69 @@
-// .modal {
-//   width: 100%;
-//   height: 100vh;
-//   overflow-y: scroll;
+.modal {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 
-//   position: fixed;
-//   left: 50%;
-//   transform: translate(-50%);
-//   z-index: 3;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
 
-//   background-color: $main-color;
+  background-color: $main-color;
+}
 
-//   .wrap {
-//     width: 490px;
-//     max-height: 608px;
-//     position: fixed;
-//     background-color: $blog-color;
-//     top: 136px;
-//     left: 50%;
-//     transform: translate(-50%);
-//     box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
-//   }
+.modal__close {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  right: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 
-//   img {
-//     width: 100%;
-//     object-fit: cover;
-//   }
+  outline: none;
 
-//   h2 {
-//     font-family: "Cormorant Garamond", "Arial", sans-serif;
-//     font-size: 34px;
-//     line-height: 130%;
-//     color: $text-color;
-//     text-align: center;
-//   }
-// }
+  &:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: -23px;
+    width: 20px;
+    height: 1px;
+    background-color: $text-color;
+  }
 
-// .modal__close {
-//   position: absolute;
-//   content: "";
-//   width: 14px;
-//   height: 14px;
-//   top: 0;
-//   right: 0;
-//   border: none;
-//   cursor: pointer;
-//   background-color: inherit;
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
 
-//   outline: none;
+  &::after {
+    transform: rotate(-45deg);
+  }
 
-//   &:focus {
-//     outline: -webkit-focus-ring-color auto 1px;
-//   }
+  @media (max-width: $tablet-width) {
 
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 25px;
-//     left: 10px;
-//     width: 23px;
-//     height: 1px;
-//     background-color: $text-color;
-//   }
+    &::before,
+    &::after {
+      top: 28px;
+      left: -28px;
+      width: 24px;
+    }
+  }
 
-//   &::before {
-//     transform: rotate(45deg);
-//     box-shadow: none;
-//   }
+  @media (max-width: $mobile-width) {
 
-//   &::after {
-//     transform: rotate(-45deg);
-//   }
-// }
+    &::before,
+    &::after {
+      top: 21px;
+      left: -18px;
+      width: 20px;
+    }
+  }
+}

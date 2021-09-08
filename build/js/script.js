@@ -1,6 +1,6 @@
 // Menu
 
-const body = document.querySelector('main')
+const page = document.querySelector('main')
 const header = document.querySelector('.header');
 const navToggle = document.querySelector('.header__toggle');
 
@@ -19,11 +19,11 @@ navToggle.addEventListener('click', function () {
   if (header.classList.contains('header--closed')) {
     header.classList.remove('header--closed');
     header.classList.add('header--opened');
-    body.classList.add('body-lock');
+    page.classList.add('body-lock');
   } else {
     header.classList.add('header--closed');
     header.classList.remove('header--opened');
-    body.classList.remove('body-lock');
+    page.classList.remove('body-lock');
   }
 });
 
@@ -32,7 +32,7 @@ document.addEventListener('keydown', (evt) => {
     if (!header.classList.contains('header--closed')) {
       header.classList.remove('header--opened');
       header.classList.add('header--closed');
-      body.classList.remove('body-lock')
+      page.classList.remove('body-lock')
     }
     closeMenu();
   }
@@ -53,11 +53,11 @@ navLinks.forEach((link) => {
 
 
 const swiper = new Swiper('.swiper-container', {
-  // slidesPerView: 4,
-  // slidesPerGroup: 4,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
   // slidesPerColumn: 4,
   // slidesPerColumnFill:"row",
-  // spaceBetween: 30,
+  spaceBetween: 10,
 
   breakpoints: {
     320: {
@@ -69,7 +69,7 @@ const swiper = new Swiper('.swiper-container', {
       slidesPerView: 4,
       slidesPerGroup: 4,
       spaceBetween: 30,
-    }
+    },
   },
 
   navigation: {
@@ -92,9 +92,9 @@ const accordion = document.querySelectorAll('.accordion');
 const accordionToggle = document.querySelectorAll('.question__heading');
 
 
-  accordion.forEach((item) => {
-    item.classList.add('accordion--close');
-  });
+accordion.forEach((item) => {
+  item.classList.add('accordion--close');
+});
 
 
 const emergenceToggle = () => {
@@ -110,7 +110,6 @@ accordionToggle.forEach((toggle) => {
   toggle.addEventListener('click', () => {
 
     emergenceToggle();
-    // rem();
 
     const parent = toggle.parentNode;
 
@@ -126,11 +125,110 @@ accordionToggle.forEach((toggle) => {
 
     if (parent.classList.contains('accordion--close')) {
       accordion.forEach((item) =>
-      item.classList.add('accordion--close'));
+        item.classList.add('accordion--close'));
       parent.classList.remove('accordion--close');
     } else {
       parent.classList.add('accordion--close');
       console.log(item);
     }
   })
+});
+
+// Modal window
+
+const body = document.querySelector('body');
+const modal = document.querySelector('.modal');
+const closeModalButton = modal.querySelector('.modal__close');
+const openModalButton = document.querySelector('.purchases__link--login');
+
+const LOGIN_EMAIL = modal.querySelector('#login-email');
+const LOGIN_PASSWORD = modal.querySelector('#login-password');
+const LOGIN_BUTTON = modal.querySelector('.login__button');
+
+function existVerticalScroll() {
+  return document.body.offsetHeight > window.innerHeight
+};
+
+function getBodyScrollTop() {
+  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+};
+
+// const setTabindex = () => {
+//   MODAL_NAME.setAttribute('tabindex', 1);
+//   MODAL_PHONE.setAttribute('tabindex', 2);
+//   MODAL_QUESTION.setAttribute('tabindex', 3);
+//   MODAL_BUTTON.setAttribute('tabindex', 4);
+//   MODAL_CHECKBOX.setAttribute('tabindex', 5);
+//   closeModalButton.setAttribute('tabindex', 6);
+// }
+
+// const removeTabindex = () => {
+//   MODAL_NAME.removeAttribute('tabindex');
+//   MODAL_PHONE.removeAttribute('tabindex');
+//   MODAL_QUESTION.removeAttribute('tabindex');
+//   MODAL_BUTTON.removeAttribute('tabindex');
+//   MODAL_CHECKBOX.removeAttribute('tabindex');
+//   closeModalButton.removeAttribute('tabindex');
+// }
+
+openModalButton.addEventListener('click', e => {
+  e.preventDefault();
+
+  body.dataset.scrollY = getBodyScrollTop();
+
+  modal.classList.remove('visually-hidden');
+
+  LOGIN_EMAIL.focus();
+
+  if (existVerticalScroll()) {
+    body.classList.add('body-lock')
+    body.style.top = `-${body.dataset.scrollY}px`
+  };
+
+  // setTabindex();
+  focusLock.on(modal);
+})
+
+closeModalButton.addEventListener('click', e => {
+  e.preventDefault();
+
+  modal.classList.add('visually-hidden');
+
+  if (existVerticalScroll()) {
+    body.classList.remove('body-lock')
+    window.scrollTo(0, body.dataset.scrollY)
+  };
+
+  // removeTabindex();
+  focusLock.off(modal);
+})
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    if (!modal.classList.contains('visually-hidden')) {
+      modal.classList.add('visually-hidden');
+    }
+
+    if (existVerticalScroll()) {
+      body.classList.remove('body-lock')
+      window.scrollTo(0, body.dataset.scrollY)
+    }
+
+    // removeTabindex();
+    focusLock.off(modal);
+  };
+});
+
+modal.addEventListener('click', (evt) => {
+  if (evt.target === modal) {
+    modal.classList.add('visually-hidden');
+  }
+
+  if (existVerticalScroll()) {
+    body.classList.remove('body-lock')
+    window.scrollTo(0, body.dataset.scrollY)
+  };
+
+  // removeTabindex();
+  focusLock.off(modal);
 });
