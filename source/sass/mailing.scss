@@ -1,0 +1,71 @@
+.mailing {
+  width: 43.5%;
+
+  h3 {
+    font-weight: normal;
+    font-size: 16px;
+    color: $data-color;
+  }
+
+  .wrap {
+    padding-top: 26px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $main-color;
+  }
+
+  input {
+    background-color: $footer-background;
+    border: none;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $data-color;
+  }
+
+  button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $main-color;
+    background-color: $footer-background;
+    border: none;
+    outline: none;
+  }
+
+  svg {
+    padding-left: 11px;
+    stroke: $main-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 93%;
+    padding-bottom: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+
+    h3 {
+      width: 85%;
+    }
+
+    label {
+      width: 56%;
+    }
+
+    button {
+      padding-right: 0;
+    }
+
+    svg {
+      padding-left: 12px;
+    }
+  }
+}

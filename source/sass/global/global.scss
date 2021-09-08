@@ -29,6 +29,15 @@ footer {
   position: fixed;
 }
 
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -42,102 +51,114 @@ footer {
   overflow: hidden;
 }
 
-.button {
+.block-heading {
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-size: 34px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.block-link {
+  width: max-content;
   margin: 0 auto;
+  display: block;
+  font-size: 16px;
+  border-bottom: 1px solid $excretion-color;
+  text-align: center;
+}
+
+button {
   text-decoration: none;
   display: flex;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  width: 326px;
-  height: 51px;
   color: $text-color;
-  background-color: $main-color;
-  border: 1px solid $excretion-color;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $text-color;
+  border: none;
+  outline: none;
+  background-color: inherit;
   cursor: pointer;
   transition-duration: 0.3s;
 
-  &:hover,
-  &:focus {
-    border-radius: 10px;
-    transform: scale(1.1, 1.1);
-  }
+  // &:hover,
+  // &:focus {
+  //   border-radius: 10px;
+  //   transform: scale(1.1, 1.1);
+  // }
 }
 
 .container {
-   max-width: 1170px;
-   padding: 0 98px;
-   margin: 0 auto;
+  max-width: 1170px;
+  padding: 0 98px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+  }
 }
 
-// .toggle {
-//   display: none;
-// }
+.question__heading--close {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
 
-// .toggle--close {
-//   @media (max-width: $mobile-width) {
-//     display: block;
-//     width: 100%;
-//     height: 46px;
-//     border: none;
-//     cursor: pointer;
-//     background-color: inherit;
 
-//     outline: none;
+  outline: none;
 
-//     &::before,
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       top: 36px;
-//       right: 17px;
-//       width: 16px;
-//       height: 1px;
-//       background-color: $toogle-color;
-//     }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 17px;
+    width: 16px;
+    height: 12px;
+    background-image: url("../img/icons/arrow-bottom_icon.svg");
+    background-repeat: no-repeat;
 
-//     &::before {
-//       box-shadow: none;
-//     }
+  }
+}
 
-//     &::after {
-//       transform: rotate(-90deg);
-//     }
-//   }
-// }
 
-// .toggle--open {
-//   @media (max-width: $mobile-width) {
-//     display: block;
-//     width: 100%;
-//     height: 46px;
-//     border: none;
-//     cursor: pointer;
-//     background-color: inherit;
+.question__heading--open {
 
-//     outline: none;
+  display: block;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
 
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       top: 36px;
-//       right: 17px;
-//       width: 16px;
-//       height: 1px;
-//       background-color: $toogle-color;
-//       box-shadow: none;
-//     }
-//   }
-// }
 
-// .accordion ul {
-//   @media (max-width: $mobile-width) {
-//     display: block;
-//   }
-// }
+  outline: none;
 
-// .accordion--close ul {
-//   @media (max-width: $mobile-width) {
-//     display: none;
-//   }
-// }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 17px;
+    width: 16px;
+    height: 12px;
+    background-image: url("../img/icons/arrow-top_icon.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.accordion .question__text {
+
+  display: block;
+
+}
+
+.accordion--close .question__text {
+
+  display: none;
+
+}

@@ -1,0 +1,57 @@
+.socials {
+  ul {
+    padding-left: 0;
+    padding-top: 6px;
+  }
+
+  li {
+    margin-bottom: 22px;
+    list-style: none;
+
+    &:first-of-type svg {
+      padding-right: 17px;
+    }
+  }
+
+  a {
+    color: $main-color;
+  }
+
+  svg {
+    padding-right: 12px;
+    fill: $main-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-right: 36px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      &:first-of-type {
+        margin-left: -5px;
+      }
+
+      &:first-of-type svg {
+        padding-right: 25px;
+      }
+    }
+
+    svg {
+      width: 21px;
+      height: 21px;
+      padding-right: 29px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

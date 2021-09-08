@@ -1,0 +1,25 @@
+.main--catalog {
+  padding-bottom: 57px;
+
+  .container {
+    display: flex;
+    padding-top: 81px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 58px;
+
+    .container {
+      display: block;
+      padding-top: 50px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 50px;
+
+    .container {
+      padding-top: 40px;
+    }
+  }
+}

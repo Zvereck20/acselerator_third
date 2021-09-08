@@ -1,0 +1,29 @@
+.about {
+  padding-right: 24px;
+
+  ul {
+    padding-left: 0;
+    padding-top: 6px;
+  }
+
+  li {
+    margin-bottom: 22px;
+    list-style: none;
+  }
+
+  a {
+    color: $main-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: -10px;
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+     ul {
+      padding-top: 4px;
+     }
+  }
+ }

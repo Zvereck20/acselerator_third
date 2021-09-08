@@ -1,0 +1,268 @@
+.products {
+  &--index {
+    padding-top: 105px;
+  }
+
+  min-width: 0;
+
+  .block-heading {
+    margin-bottom: 35px;
+    letter-spacing: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--index {
+      padding-top: 55px;
+    }
+
+    .block-heading {
+      margin-bottom: 33px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--index {
+      padding-top: 45px;
+    }
+
+    .block-heading {
+      margin-bottom: 31px;
+    }
+  }
+}
+
+
+.products .swiper-wrapper {
+  min-width: 0;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: 98%;
+}
+
+// .products--index .products__list {
+//   padding-top: 45px;
+//   padding-left: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+
+//   @media (max-width: $tablet-width) {
+//     padding-top: 37px;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//   }
+
+//   @media (max-width: $mobile-width) {
+//     padding-top: 28px;
+//     align-items: flex-start;
+//   }
+// }
+
+
+
+// .products .swiper-wrapper {
+//   padding-top: 45px;
+//   padding-left: 0;
+//   // display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+
+//   @media (max-width: $tablet-width) {
+//     padding-top: 37px;
+//     // flex-wrap: wrap;
+//     justify-content: center;
+//   }
+
+//   @media (max-width: $mobile-width) {
+//     padding-top: 28px;
+//     align-items: flex-start;
+//   }
+// }
+
+.products--catalog .products__list {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    padding-top: 49px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 40px;
+  }
+}
+
+// .products--index .products__item {
+//   margin-left: 10px;
+
+//   &:first-of-type {
+//     margin-left: 0;
+//   }
+
+//   @media (max-width: $tablet-width) {
+//     margin-left: 0;
+
+//     &:nth-of-type(odd) {
+//       margin-right: 30px;
+//     }
+
+//     img {
+//       width: 324px;
+//       height: 340px;
+//     }
+
+//     &:first-of-type {
+//       p {
+//         margin-left: 15px;
+//       }
+
+//       span {
+//         margin-left: -15px;
+//       }
+//     }
+//   }
+
+//   @media (max-width: $mobile-width) {
+//     &:first-of-type {
+//       p {
+//         margin-left: 0;
+//       }
+
+//       span {
+//         margin-left: 0;
+//       }
+//     }
+
+//     img {
+//       width: 130px;
+//       height: 136px;
+//     }
+//   }
+// }
+
+
+
+// .products .swiper-slide {
+//   flex-basis: 23%;
+//   margin-left: 10px;
+
+//   &:first-of-type {
+//     margin-left: 0;
+//   }
+
+//   @media (max-width: $tablet-width) {
+//     margin-left: 0;
+
+//     &:nth-of-type(odd) {
+//       margin-right: 30px;
+//     }
+
+//     img {
+//       width: 324px;
+//       height: 340px;
+//     }
+
+//     &:first-of-type {
+//       p {
+//         margin-left: 15px;
+//       }
+
+//       span {
+//         margin-left: -15px;
+//       }
+//     }
+//   }
+
+//   @media (max-width: $mobile-width) {
+//     &:first-of-type {
+//       p {
+//         margin-left: 0;
+//       }
+
+//       span {
+//         margin-left: 0;
+//       }
+//     }
+
+//     img {
+//       width: 130px;
+//       height: 136px;
+//     }
+//   }
+// }
+
+.products--catalog .products__item {
+  flex-basis: 32%;
+  margin-right: -10px;
+  margin-left: 6px;
+  margin-bottom: 20px;
+
+  p {
+    margin-left: -9px;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-basis: 30%;
+    margin-left: 0;
+    margin-right: 0;
+
+    p {
+      margin-left: 0;
+    }
+
+    img {
+      min-width: 206px;
+      min-height: 208px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-basis: 45%;
+    margin-bottom: 10px;
+
+    img {
+      min-width: 130px;
+      min-height: 136px;
+    }
+  }
+}
+
+.products__item {
+  list-style: none;
+
+  // img {
+  //   height: auto;
+  // }
+
+  p {
+    text-align: center;
+  }
+
+  br {
+    display: none;
+  }
+
+  span {
+    padding-top: 5px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  @media (max-width: $mobile-width) {
+    p {
+      margin-top: 12px;
+      margin-right: 0;
+    }
+
+    br {
+      display: block;
+    }
+  }
+}

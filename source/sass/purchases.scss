@@ -1,0 +1,52 @@
+.purchases {
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 21px;
+
+  a {
+    padding-left: 35px;
+  }
+
+  svg {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    order: 2;
+
+    a {
+      padding-left: 0;
+      padding-top: 6px;
+      display: block;
+      font-size: 18px;
+      line-height: 130%;
+      color: $main-color;
+    }
+
+    span {
+      display: none;
+    }
+
+    svg {
+      display: block;
+      position: absolute;
+      top: 54px;
+      right: 43px;
+      stroke: $main-color;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    a {
+      padding-top: 0;
+    }
+
+    svg {
+      width: 19px;
+      height: 18px;
+      top: 37px;
+      right: 29px;
+    }
+  }
+}
