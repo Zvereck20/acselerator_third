@@ -22,7 +22,6 @@
   }
 
   @media (max-width: $tablet-width) {
-
     &--close::after,
     &--open::after {
       right: 45px;
@@ -34,7 +33,6 @@
   }
 
   @media (max-width: $mobile-width) {
-
     &--open::after,
     &--close::after {
       right: 21px;
@@ -129,7 +127,7 @@
     z-index: -1;
     opacity: 0;
 
-    &:focus+label {
+    &:focus + label {
       outline: 1px solid $excretion-color;
     }
   }
@@ -204,13 +202,13 @@
     }
   }
 
-  input+label {
+  input + label {
     display: inline-flex;
     align-items: center;
     user-select: none;
   }
 
-  input+label::before {
+  input + label::before {
     content: "";
     position: absolute;
     width: 16px;
@@ -226,7 +224,7 @@
     }
   }
 
-  input:checked+label::before {
+  input:checked + label::before {
     background-color: $excretion-color;
   }
 
@@ -299,7 +297,7 @@
     }
   }
 
-  input+label::before {
+  input + label::before {
     content: "";
     position: absolute;
     width: 15px;
@@ -308,10 +306,9 @@
     border-radius: 50%;
     top: -6px;
     left: 5px;
-
   }
 
-  input+label:last-of-type::before {
+  input + label:last-of-type::before {
     left: 10px;
   }
 
@@ -347,18 +344,17 @@
       }
     }
 
-    input+label::before {
+    input + label::before {
       width: 18px;
       height: 18px;
     }
 
-    input+label:last-of-type::before {
+    input + label:last-of-type::before {
       left: 8px;
     }
   }
 
   @media (max-width: $mobile-width) {
-
     button {
       padding-top: 19px;
     }

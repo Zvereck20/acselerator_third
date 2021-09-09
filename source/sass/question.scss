@@ -56,7 +56,6 @@
     br {
       display: block;
     }
-
   }
 }
 
@@ -73,10 +72,10 @@
   text-align: left;
   transition-duration: 0.3s;
 
-    &:hover,
-    &:active {
-      opacity: 0.6;
-    }
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (max-width: $mobile-width) {
     font-size: 16px;

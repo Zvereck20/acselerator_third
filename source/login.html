@@ -80,7 +80,12 @@
   <main class="main">
 
     <div class="login">
-      <img src="./img/login-img.jpg" alt="Изображение украшений" width="430" height="138">
+      <!-- 1x: 430x138px; 2x: 860x276px -->
+      <picture>
+        <source type="image/webp" srcset="img/login-img.webp 1x, img/login-img2x.webp 2x">
+        <img src="img/login-img.jpg" alt="Изображение украшений" width="430" height="138"
+          srcset="img/login-img2x.jpg 2x">
+      </picture>
       <h2>Log In</h2>
       <form method="GET" action="#" class="login__field">
         <label for="login-email">

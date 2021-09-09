@@ -99,10 +99,10 @@
   background-color: $excretion-color;
   transition-duration: 0.3s;
 
-    &:hover,
-    &:active {
-      transform: scale(1.1, 1.1);
-    }
+  &:hover,
+  &:active {
+    transform: scale(1.1, 1.1);
+  }
 
   @media (max-width: $mobile-width) {
     width: 240px;
@@ -125,10 +125,10 @@
   line-height: 21px;
   transition-duration: 0.3s;
 
-    &:hover,
-    &:active {
-      transform: scale(1.1, 1.1);
-    }
+  &:hover,
+  &:active {
+    transform: scale(1.1, 1.1);
+  }
 
   &--account {
     padding-left: 53px;

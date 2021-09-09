@@ -83,11 +83,11 @@ li .pages__active {
   top: 20px;
   transition-duration: 0.3s;
 
-    &:hover,
-    &:active,
-    &:focus {
-      transform: scale(1.1, 1.1);
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    transform: scale(1.1, 1.1);
+  }
 
   &--previos {
     left: 40px;
