@@ -65,6 +65,12 @@ a {
   font-size: 16px;
   border-bottom: 1px solid $excretion-color;
   text-align: center;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:active {
+    transform: scale(1.1, 1.1);
+  }
 }
 
 button {
@@ -80,7 +86,7 @@ button {
   line-height: 130%;
   color: $text-color;
   border: none;
-  outline: none;
+  // outline: none;
   background-color: inherit;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -152,13 +158,9 @@ button {
 }
 
 .accordion .question__text {
-
   display: block;
-
 }
 
 .accordion--close .question__text {
-
   display: none;
-
 }

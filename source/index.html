@@ -23,7 +23,7 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <div class="container">
-      <label class="header__search" for="search" class="header__search">
+      <label class="header__search" for="search">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite.svg#search_icon"></use>
         </svg>
@@ -259,7 +259,7 @@
               </p>
             </div>
           </div> -->
-          <!-- <div class="pages pages--index">
+      <!-- <div class="pages pages--index">
             <ul>
               <li>
                 <a href="#" class="pages__active">1</a>
@@ -280,7 +280,7 @@
                 <a href="#">6</a>
             </ul>
           </div> -->
-        <!-- </div>
+      <!-- </div>
       </section> -->
 
       <section class="blog">
@@ -452,24 +452,25 @@
   </footer>
 
   <section class="modal visually-hidden">
-    <button class="modal__close">
-      <span class="visually-hidden">Закрыть окно</span>
-    </button>
     <div class="login">
+      <button class="modal__close">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
       <img src="./img/login-img.jpg" alt="Изображение украшений" width="430" height="138">
       <h2>Log In</h2>
       <form method="GET" action="#" class="login__field">
         <label for="login-email">
           <input type="email" id="login-email" name="login-email" placeholder="Your E-mail">
         </label>
-        <label for="">
+        <label for="login-password">
           <input type="password" id="login-password" name="login-password" placeholder="Password">
         </label>
-        <button class="login__button">Log In</button></form>
+        <button class="login__button">Log In</button>
+      </form>
       <div class="login__links">
-        <a href="#" class="login__links-type modal__links-type--password">Forgot your password?</a>
-        <a href="#" class="login__links-type modal__links-type--account">Don’t have an account?</a>
-        <a href="#" class="login__links-type modal__links-type--enter">Sign up</a>
+        <a href="#" class="login__links-type login__links-type--password">Forgot your password?</a>
+        <a href="#" class="login__links-type login__links-type--account">Don’t have an account?</a>
+        <a href="#" class="login__links-type login__links-type--enter">Sign up</a>
       </div>
     </div>
   </section>

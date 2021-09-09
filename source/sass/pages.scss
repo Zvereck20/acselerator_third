@@ -21,6 +21,12 @@
   li {
     padding-right: 13px;
     list-style: none;
+    transition-duration: 0.3s;
+
+    &:hover,
+    &:active {
+      transform: scale(1.1, 1.1);
+    }
 
     &:first-of-type {
       padding-left: 14px;
@@ -74,8 +80,14 @@ li .pages__active {
   border: none;
   outline: none;
   background-color: inherit;
-
   top: 20px;
+  transition-duration: 0.3s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      transform: scale(1.1, 1.1);
+    }
 
   &--previos {
     left: 40px;

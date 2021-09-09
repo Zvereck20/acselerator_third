@@ -61,6 +61,7 @@
 }
 
 .question__heading {
+  width: 100%;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -69,10 +70,16 @@
   border: none;
   outline: none;
   background-color: $main-color;
+  text-align: left;
+  transition-duration: 0.3s;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
 
   @media (max-width: $mobile-width) {
     font-size: 16px;
-    text-align: left;
     line-height: 140%;
   }
 }

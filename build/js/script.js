@@ -44,7 +44,7 @@ navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     header.classList.add('header--closed');
     header.classList.remove('header--opened');
-    body.classList.remove('body-lock')
+    page.classList.remove('body-lock')
     closeMenu();
   })
 })
@@ -91,11 +91,17 @@ const swiper = new Swiper('.swiper-container', {
 const accordion = document.querySelectorAll('.accordion');
 const accordionToggle = document.querySelectorAll('.question__heading');
 
+const hidden = document.querySelectorAll('.sidebar__checkbox');
+const hiddenToggle = document.querySelectorAll('.sidebar__checkbox button');
+
 
 accordion.forEach((item) => {
   item.classList.add('accordion--close');
 });
 
+hidden.forEach((item) => {
+  item.classList.add('sidebar__checkbox--close');
+});
 
 const emergenceToggle = () => {
   accordionToggle.forEach((toggle) => {
@@ -104,7 +110,14 @@ const emergenceToggle = () => {
   })
 };
 
+const emergenceHidden = () => {
+  hiddenToggle.forEach((toggle) => {
+    toggle.classList.add('sidebar--close');
+  })
+};
+
 emergenceToggle();
+emergenceHidden();
 
 accordionToggle.forEach((toggle) => {
   toggle.addEventListener('click', () => {
@@ -112,8 +125,6 @@ accordionToggle.forEach((toggle) => {
     emergenceToggle();
 
     const parent = toggle.parentNode;
-
-    console.log(parent);
 
     if (parent.classList.contains('accordion--close')) {
       toggle.classList.remove('question__heading--close');
@@ -129,10 +140,33 @@ accordionToggle.forEach((toggle) => {
       parent.classList.remove('accordion--close');
     } else {
       parent.classList.add('accordion--close');
-      console.log(item);
     }
   })
 });
+
+hiddenToggle.forEach((toggle) => {
+  toggle.addEventListener('click', () => {
+
+    const parent = toggle.parentNode;
+
+    if (parent.classList.contains('sidebar__checkbox--close')) {
+      toggle.classList.remove('sidebar--close');
+      toggle.classList.add('sidebar--open');
+    } else {
+      toggle.classList.remove('sidebar--open');
+      toggle.classList.add('sidebar--close');
+    }
+
+    if (parent.classList.contains('sidebar__checkbox--close')) {
+      accordion.forEach((item) =>
+        item.classList.add('sidebar__checkbox--close'));
+      parent.classList.remove('sidebar__checkbox--close');
+    } else {
+      parent.classList.add('sidebar__checkbox--close');
+    }
+  })
+});
+
 
 // Modal window
 
@@ -141,9 +175,10 @@ const modal = document.querySelector('.modal');
 const closeModalButton = modal.querySelector('.modal__close');
 const openModalButton = document.querySelector('.purchases__link--login');
 
-const LOGIN_EMAIL = modal.querySelector('#login-email');
-const LOGIN_PASSWORD = modal.querySelector('#login-password');
-const LOGIN_BUTTON = modal.querySelector('.login__button');
+const LOGIN_FORM = document.querySelector('.login__field');
+const LOGIN_EMAIL = LOGIN_FORM.querySelector('#login-email');
+const LOGIN_PASSWORD = LOGIN_FORM.querySelector('#login-password');
+const LOGIN_BUTTON = LOGIN_FORM.querySelector('.login__button');
 
 function existVerticalScroll() {
   return document.body.offsetHeight > window.innerHeight
@@ -153,23 +188,25 @@ function getBodyScrollTop() {
   return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
 };
 
-// const setTabindex = () => {
-//   MODAL_NAME.setAttribute('tabindex', 1);
-//   MODAL_PHONE.setAttribute('tabindex', 2);
-//   MODAL_QUESTION.setAttribute('tabindex', 3);
-//   MODAL_BUTTON.setAttribute('tabindex', 4);
-//   MODAL_CHECKBOX.setAttribute('tabindex', 5);
-//   closeModalButton.setAttribute('tabindex', 6);
-// }
+const setTabindex = () => {
+  LOGIN_EMAIL.setAttribute('tabindex', 1);
+  LOGIN_PASSWORD.setAttribute('tabindex', 2);
+  modal.querySelector('.login__links-type--password').setAttribute('tabindex', 3);
+  LOGIN_BUTTON.setAttribute('tabindex', 4);
+  modal.querySelector('.login__links-type--account').setAttribute('tabindex', 5);
+  modal.querySelector('.login__links-type--enter').setAttribute('tabindex', 6);
+  closeModalButton.setAttribute('tabindex', 7);
+}
 
-// const removeTabindex = () => {
-//   MODAL_NAME.removeAttribute('tabindex');
-//   MODAL_PHONE.removeAttribute('tabindex');
-//   MODAL_QUESTION.removeAttribute('tabindex');
-//   MODAL_BUTTON.removeAttribute('tabindex');
-//   MODAL_CHECKBOX.removeAttribute('tabindex');
-//   closeModalButton.removeAttribute('tabindex');
-// }
+const removeTabindex = () => {
+  LOGIN_EMAIL.removeAttribute('tabindex');
+  LOGIN_PASSWORD.removeAttribute('tabindex');
+  modal.querySelector('.login__links-type--password').removeAttribute('tabindex');
+  LOGIN_BUTTON.removeAttribute('tabindex');
+  modal.querySelector('.login__links-type--account').removeAttribute('tabindex');
+  modal.querySelector('.login__links-type--enter').removeAttribute('tabindex');
+  closeModalButton.removeAttribute('tabindex');
+}
 
 openModalButton.addEventListener('click', e => {
   e.preventDefault();
@@ -185,7 +222,7 @@ openModalButton.addEventListener('click', e => {
     body.style.top = `-${body.dataset.scrollY}px`
   };
 
-  // setTabindex();
+  setTabindex();
   focusLock.on(modal);
 })
 
@@ -199,7 +236,7 @@ closeModalButton.addEventListener('click', e => {
     window.scrollTo(0, body.dataset.scrollY)
   };
 
-  // removeTabindex();
+  removeTabindex();
   focusLock.off(modal);
 })
 
@@ -214,7 +251,7 @@ document.addEventListener('keydown', (evt) => {
       window.scrollTo(0, body.dataset.scrollY)
     }
 
-    // removeTabindex();
+    removeTabindex();
     focusLock.off(modal);
   };
 });
@@ -229,6 +266,102 @@ modal.addEventListener('click', (evt) => {
     window.scrollTo(0, body.dataset.scrollY)
   };
 
-  // removeTabindex();
+  removeTabindex();
   focusLock.off(modal);
 });
+
+LOGIN_FORM.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+
+  localStorage.setItem('login_email', LOGIN_EMAIL.value);
+  LOGIN_EMAIL.value = '';
+  LOGIN_PASSWORD.value = '';
+
+  modal.classList.add('visually-hidden');
+
+  if (existVerticalScroll()) {
+    body.classList.remove('body-lock')
+    window.scrollTo(0, body.dataset.scrollY)
+  };
+});
+
+// Checkbox
+
+const checkboxForm = document.querySelector('.sidebar__search');
+const openCheckbox = document.querySelector('.sidebar__open');
+const closeCheckbox = document.querySelector('.sidebar__close');
+const checkboxWrap = document.querySelector('.sidebar__modal');
+const checkboxSend = document.querySelector('.sidebar__button--apply');
+const checkboxClear = document.querySelector('.sidebar__button--clear');
+const input = checkboxForm.querySelectorAll('input[type="checkbox"]');
+
+openCheckbox.addEventListener('click', (evt) => {
+  evt.preventDefault();
+
+  body.dataset.scrollY = getBodyScrollTop();
+
+  checkboxForm.style.display = 'block';
+  checkboxWrap.classList.add('modal');
+  body.classList.add('body-lock');
+
+  focusLock.on(modal);
+})
+
+closeCheckbox.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  checkboxForm.style.display = 'none';
+  checkboxWrap.classList.remove('modal');
+
+  body.classList.remove('body-lock')
+
+  focusLock.off(modal);
+})
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    if (checkboxWrap.classList.contains('modal')) {
+      checkboxWrap.classList.remove('modal')
+      checkboxForm.style.display = 'none';
+    }
+
+    body.classList.remove('body-lock')
+    focusLock.off(modal);
+  };
+});
+
+checkboxWrap.addEventListener('click', (evt) => {
+  if (evt.target === checkboxWrap) {
+    checkboxWrap.classList.remove('modal')
+    checkboxForm.style.display = 'none';
+    body.classList.remove('body-lock')
+  }
+
+  focusLock.off(modal);
+});
+
+const clear = () => {
+  input.forEach((i) => {
+    i.removeAttribute("checked");
+  })
+  checkboxForm.querySelector('#necklaces').setAttribute('checked', 'checked');
+  checkboxForm.querySelector('#chokers').setAttribute('checked', 'checked');
+  checkboxForm.querySelector('#earrings').setAttribute('checked', 'checked');
+  checkboxForm.querySelector('#gold').setAttribute('checked', 'checked');
+  checkboxForm.querySelector('#pink').setAttribute('checked', 'checked');
+};
+
+checkboxSend.addEventListener('click', (evt) => {
+  evt.preventDefault();
+
+  clear();
+
+  if (checkboxWrap.classList.contains('modal')) {
+    checkboxWrap.classList.remove('modal')
+    checkboxForm.style.display = 'none';
+    body.classList.remove('body-lock');
+    focusLock.off(modal);
+  }
+});
+
+checkboxClear.addEventListener('click', clear);

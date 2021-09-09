@@ -1,9 +1,8 @@
 .login {
   width: 430px;
   padding-bottom: 53px;
-  position: fixed;
+  position: relative;
   background-color: $blog-background;
-  top: 100px;
   left: 50%;
   transform: translate(-50%);
   box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
@@ -24,16 +23,12 @@
   }
 
   @media (max-height: $tablet-width) {
-    .wrap {
-      width: 442px;
-    }
+    width: 442px;
   }
 
   @media (max-width: $mobile-width) {
-
     width: 270px;
     padding-bottom: 38px;
-
 
     img {
       height: 84px;
@@ -66,6 +61,12 @@
     border-bottom: 1px solid $text-color;
     -webkit-appearance: none;
     border-radius: 0;
+    transition-duration: 0.3s;
+
+    &:hover,
+    &:active {
+      transform: scale(1.1, 1.1);
+    }
 
     &::placeholder {
       font-family: "Poppins", "Arial", sans-serif;
@@ -96,6 +97,12 @@
   margin-top: 33px;
   color: $main-color;
   background-color: $excretion-color;
+  transition-duration: 0.3s;
+
+    &:hover,
+    &:active {
+      transform: scale(1.1, 1.1);
+    }
 
   @media (max-width: $mobile-width) {
     width: 240px;
@@ -116,6 +123,12 @@
 .login__links-type {
   font-size: 14px;
   line-height: 21px;
+  transition-duration: 0.3s;
+
+    &:hover,
+    &:active {
+      transform: scale(1.1, 1.1);
+    }
 
   &--account {
     padding-left: 53px;

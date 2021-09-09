@@ -1,6 +1,7 @@
 .header {
   padding-top: 43px;
   position: relative;
+  transition-duration: 0.3s;
 
   .container {
     display: flex;
@@ -100,6 +101,7 @@
 .header__search {
   margin-right: auto;
   position: relative;
+  transition-duration: 0.3s;
 
   svg {
     padding-right: 10px;
@@ -114,6 +116,11 @@
     font-size: 14px;
     line-height: 21px;
     color: $data-color;
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.1, 1.1);
   }
 
   @media (max-width: $tablet-width) {
@@ -146,11 +153,17 @@
 .header__logo {
   margin-top: -13px;
   margin-left: -80px;
+  transition-duration: 0.3s;
 
   svg {
     display: block;
     margin: 0 auto;
     fill: $excretion-color;
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.1, 1.1);
   }
 
   @media (max-width: $tablet-width) {

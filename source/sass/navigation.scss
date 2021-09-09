@@ -29,9 +29,16 @@
 .navigation__item {
   list-style: none;
   padding-right: 35px;
+  transition-duration: 0.3s;
+
 
   &:first-of-type {
     padding-left: 44px;
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.1, 1.1);
   }
 
   @media (max-width: $tablet-width) {
