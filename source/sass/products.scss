@@ -33,78 +33,19 @@
 }
 
 
-
-// .products .swiper-wrapper {
-//   max-width: 1172px;
-// }
-
-
-// .products--index .products__list {
-//   padding-top: 45px;
-//   padding-left: 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   @media (max-width: $tablet-width) {
-//     padding-top: 37px;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//   }
-
-//   @media (max-width: $mobile-width) {
-//     padding-top: 28px;
-//     align-items: flex-start;
-//   }
-// }
-
-
-
-// .products .swiper-wrapper {
-//   padding-top: 45px;
-//   padding-left: 0;
-//   // display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   @media (max-width: $tablet-width) {
-//     padding-top: 37px;
-//     // flex-wrap: wrap;
-//     justify-content: center;
-//   }
-
-//   @media (max-width: $mobile-width) {
-//     padding-top: 28px;
-//     align-items: flex-start;
-//   }
-// }
-
 .swiper-container {
-  max-width: 1170px;
+  overflow: hidden;
+  min-width: 0;
+  // width: 550px;
 }
 
-.products--catalog .products__list {
-  margin-top: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
+// .products .swiper-slide {
 
-  @media (max-width: $tablet-width) {
-    padding-left: 0;
-    padding-top: 49px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-top: 40px;
-  }
-}
-
-// .products--index .products__item {
-//   margin-left: 10px;
-
-//   &:first-of-type {
-//     margin-left: 0;
+//   img {
+//     display: block;
+//     max-width: 100%;
+//     height: auto;
+//     object-fit: cover;
 //   }
 
 //   @media (max-width: $tablet-width) {
@@ -148,55 +89,20 @@
 //   }
 // }
 
-
-
-.products .swiper-slide {
-
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+.products--catalog .products__list {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 
   @media (max-width: $tablet-width) {
-    margin-left: 0;
-
-    &:nth-of-type(odd) {
-      margin-right: 30px;
-    }
-
-    img {
-      width: 324px;
-      height: 340px;
-    }
-
-    &:first-of-type {
-      p {
-        margin-left: 15px;
-      }
-
-      span {
-        margin-left: -15px;
-      }
-    }
+    padding-left: 0;
+    padding-top: 49px;
   }
 
   @media (max-width: $mobile-width) {
-    &:first-of-type {
-      p {
-        margin-left: 0;
-      }
-
-      span {
-        margin-left: 0;
-      }
-    }
-
-    img {
-      width: 130px;
-      height: 136px;
-    }
+    padding-top: 40px;
   }
 }
 

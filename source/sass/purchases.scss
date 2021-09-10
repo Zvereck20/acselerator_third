@@ -12,6 +12,11 @@
     &:active {
       transform: scale(1.1, 1.1);
     }
+
+    &:hover svg,
+    &:active svg {
+      opacity: 0.6;
+    }
   }
 
   svg {

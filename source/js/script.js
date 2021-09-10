@@ -33,8 +33,8 @@ document.addEventListener('keydown', (evt) => {
       header.classList.remove('header--opened');
       header.classList.add('header--closed');
       page.classList.remove('body-lock')
+      closeMenu();
     }
-    closeMenu();
   }
 });
 
@@ -74,7 +74,7 @@ const swiper = new Swiper('.swiper-container', {
 
   navigation: {
     nextEl: '.products__button--next',
-    prevEl: '.products__button--prewiev',
+    prevEl: '.products__button--preview',
   },
   // ставми классы собственных кнопок, без доп от swiper
 
@@ -113,6 +113,7 @@ const emergenceToggle = () => {
 const emergenceHidden = () => {
   hiddenToggle.forEach((toggle) => {
     toggle.classList.add('sidebar--close');
+    toggle.classList.remove('sidebar--open');
   })
 };
 
@@ -147,6 +148,8 @@ accordionToggle.forEach((toggle) => {
 hiddenToggle.forEach((toggle) => {
   toggle.addEventListener('click', () => {
 
+    emergenceHidden();
+
     const parent = toggle.parentNode;
 
     if (parent.classList.contains('sidebar__checkbox--close')) {
@@ -158,7 +161,7 @@ hiddenToggle.forEach((toggle) => {
     }
 
     if (parent.classList.contains('sidebar__checkbox--close')) {
-      accordion.forEach((item) =>
+      hidden.forEach((item) =>
         item.classList.add('sidebar__checkbox--close'));
       parent.classList.remove('sidebar__checkbox--close');
     } else {
@@ -287,81 +290,83 @@ LOGIN_FORM.addEventListener('submit', (evt) => {
 
 // Checkbox
 
-const checkboxForm = document.querySelector('.sidebar__search');
 const openCheckbox = document.querySelector('.sidebar__open');
-const closeCheckbox = document.querySelector('.sidebar__close');
-const checkboxWrap = document.querySelector('.sidebar__modal');
-const checkboxSend = document.querySelector('.sidebar__button--apply');
-const checkboxClear = document.querySelector('.sidebar__button--clear');
-const input = checkboxForm.querySelectorAll('input[type="checkbox"]');
 
-openCheckbox.addEventListener('click', (evt) => {
-  evt.preventDefault();
+if (openCheckbox) {
+  const checkboxForm = document.querySelector('.sidebar__search');
+  const closeCheckbox = document.querySelector('.sidebar__close');
+  const checkboxWrap = document.querySelector('.sidebar__modal');
+  const checkboxSend = document.querySelector('.sidebar__button--apply');
+  const checkboxClear = document.querySelector('.sidebar__button--clear');
+  const input = checkboxForm.querySelectorAll('input[type="checkbox"]');
 
-  body.dataset.scrollY = getBodyScrollTop();
+  openCheckbox.addEventListener('click', (evt) => {
+    evt.preventDefault();
 
-  checkboxForm.style.display = 'block';
-  checkboxWrap.classList.add('modal');
-  body.classList.add('body-lock');
+    body.dataset.scrollY = getBodyScrollTop();
 
-  focusLock.on(modal);
-})
+    checkboxForm.style.display = 'block';
+    checkboxWrap.classList.add('modal');
+    body.classList.add('body-lock');
 
-closeCheckbox.addEventListener('click', (e) => {
-  e.preventDefault();
+    focusLock.on(modal);
+  })
 
-  checkboxForm.style.display = 'none';
-  checkboxWrap.classList.remove('modal');
+  closeCheckbox.addEventListener('click', (e) => {
+    e.preventDefault();
 
-  body.classList.remove('body-lock')
+    checkboxForm.style.display = 'none';
+    checkboxWrap.classList.remove('modal');
 
-  focusLock.off(modal);
-})
+    body.classList.remove('body-lock')
 
-document.addEventListener('keydown', (evt) => {
-  if (evt.keyCode === 27) {
+    focusLock.off(modal);
+  })
+
+  document.addEventListener('keydown', (evt) => {
+    if (evt.keyCode === 27) {
+      if (checkboxWrap.classList.contains('modal')) {
+        checkboxWrap.classList.remove('modal')
+        checkboxForm.style.display = 'none';
+      }
+
+      body.classList.remove('body-lock')
+      focusLock.off(modal);
+    };
+  });
+
+  checkboxWrap.addEventListener('click', (evt) => {
+    if (evt.target === checkboxWrap) {
+      checkboxWrap.classList.remove('modal')
+      checkboxForm.style.display = 'none';
+      body.classList.remove('body-lock')
+    }
+
+    focusLock.off(modal);
+  });
+
+  const clear = () => {
+    input.forEach((i) => {
+      i.checked = false;
+    })
+    checkboxForm.querySelector('#necklaces').checked = true;
+    checkboxForm.querySelector('#chokers').checked = true;
+    checkboxForm.querySelector('#earrings').checked = true;
+    checkboxForm.querySelector('#gold').checked = true;
+    checkboxForm.querySelector('#pink').checked = true;
+  };
+
+  checkboxSend.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
     if (checkboxWrap.classList.contains('modal')) {
       checkboxWrap.classList.remove('modal')
       checkboxForm.style.display = 'none';
+      body.classList.remove('body-lock');
+      focusLock.off(modal);
     }
+  });
 
-    body.classList.remove('body-lock')
-    focusLock.off(modal);
-  };
-});
+  checkboxClear.addEventListener('click', clear);
 
-checkboxWrap.addEventListener('click', (evt) => {
-  if (evt.target === checkboxWrap) {
-    checkboxWrap.classList.remove('modal')
-    checkboxForm.style.display = 'none';
-    body.classList.remove('body-lock')
-  }
-
-  focusLock.off(modal);
-});
-
-const clear = () => {
-  input.forEach((i) => {
-    i.removeAttribute("checked");
-  })
-  checkboxForm.querySelector('#necklaces').setAttribute('checked', 'checked');
-  checkboxForm.querySelector('#chokers').setAttribute('checked', 'checked');
-  checkboxForm.querySelector('#earrings').setAttribute('checked', 'checked');
-  checkboxForm.querySelector('#gold').setAttribute('checked', 'checked');
-  checkboxForm.querySelector('#pink').setAttribute('checked', 'checked');
-};
-
-checkboxSend.addEventListener('click', (evt) => {
-  evt.preventDefault();
-
-  clear();
-
-  if (checkboxWrap.classList.contains('modal')) {
-    checkboxWrap.classList.remove('modal')
-    checkboxForm.style.display = 'none';
-    body.classList.remove('body-lock');
-    focusLock.off(modal);
-  }
-});
-
-checkboxClear.addEventListener('click', clear);
+}

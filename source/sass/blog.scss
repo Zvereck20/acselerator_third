@@ -52,14 +52,14 @@
       position: absolute;
       bottom: 0;
       right: 0;
+    }
 
-      h3 {
-        margin-top: -58px;
-      }
+    h3 {
+      margin-top: -58px;
+    }
 
-      a {
-        margin-top: -57px;
-      }
+    a {
+      margin-top: -57px;
     }
   }
 
@@ -74,18 +74,18 @@
       .blog__wrap {
         position: relative;
         max-width: none;
+      }
 
-        span {
-          padding-top: 83px;
-        }
+      span {
+        padding-top: 83px;
+      }
 
-        h3 {
-          margin-top: -52px;
-        }
+      h3 {
+        margin-top: -52px;
+      }
 
-        a {
-          margin-top: -47px;
-        }
+      a {
+        margin-top: -47px;
       }
     }
   }
@@ -101,8 +101,11 @@
       }
     }
 
-    &--trends .blog__wrap {
-      height: 256px;
+    &--trends {
+
+      .blog__wrap {
+        height: 256px;
+      }
 
       span {
         padding-top: 60px;
@@ -183,7 +186,7 @@
     background-image: url("../img/index/blog-care.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/index/blog-care2x.png");
+      background-image: url("../img/index/blog-care2x.jpg");
     }
   }
 
@@ -191,7 +194,7 @@
     background-image: url("../img/index/blog-power.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/index/blog-power2x.png");
+      background-image: url("../img/index/blog-power2x.jpg");
     }
   }
 
@@ -199,7 +202,7 @@
     background-image: url("../img/index/blog-trends.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/index/blog-trends2x.png");
+      background-image: url("../img/index/blog-trends2x.jpg");
     }
   }
 
