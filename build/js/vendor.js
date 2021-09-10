@@ -7163,7 +7163,7 @@
         if (params.renderFraction) {
           paginationHTML = params.renderFraction.call(swiper, params.currentClass, params.totalClass);
         } else {
-          paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' / ' + ("<span class=\"" + params.totalClass + "\"></span>");
+          paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' of ' + ("<span class=\"" + params.totalClass + "\"></span>");
         }
 
         $el.html(paginationHTML);

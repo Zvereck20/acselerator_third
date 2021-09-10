@@ -51,24 +51,38 @@ navLinks.forEach((link) => {
 
 // Swiper
 
-
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   slidesPerGroup: 2,
-  // slidesPerColumn: 4,
-  // slidesPerColumnFill:"row",
-  spaceBetween: 10,
+  simulateTouch: false,
+  shortSwipes: false,
+  grabCursor: false,
+  spaceBetween: 30,
 
   breakpoints: {
     320: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 10,
+      spaceBetween: 30,
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'fraction',
+      },
+    },
+    768: {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
     },
     1024: {
       slidesPerView: 4,
       slidesPerGroup: 4,
-      spaceBetween: 30,
     },
   },
 
@@ -76,13 +90,6 @@ const swiper = new Swiper('.swiper-container', {
     nextEl: '.products__button--next',
     prevEl: '.products__button--preview',
   },
-  // ставми классы собственных кнопок, без доп от swiper
-
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  //   type: 'fraction',
-  // },
 });
 
 

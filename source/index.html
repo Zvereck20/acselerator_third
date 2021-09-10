@@ -88,15 +88,11 @@
       </h1>
     </section>
 
-
-
     <section class="products products--index">
       <div class="container">
-        <h2 class="block-heading">New In</h2>
-        <a href="catalog.html" class="block-link">Shop Now</a>
-
-
-        <div class="swiper-container">
+        <div class="swiper mySwiper">
+          <h2 class="block-heading">New In</h2>
+          <a href="catalog.html" class="block-link">Shop Now</a>
 
           <div class="products__button products__button--preview">
             <svg width="30" height="11" viewBox="0 0 30 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,88 +104,161 @@
               <use xlink:href="img/sprite.svg#arrow-right_icon"></use>
             </svg>
           </div>
-
-
-          <div class="products__list swiper-wrapper">
-            <div class="products__item swiper-slide">
-              <img src="img/index/necklace-ametist.jpg" alt="Necklace with amethyst" width="270" height="284">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp"
+                  srcset="img/index/necklace-ametist.webp 1x, img/index/necklace-ametist2x.webp 2x">
+                <img src="img/index/necklace-ametist.jpg" alt="Necklace with amethyst" width="270" height="284"
+                  srcset="img/index/necklace-ametist2x.jpg 2x">
+              </picture>
               <p>
                 Necklace with&nbsp;<br> amethyst
                 <span>$ 145</span>
               </p>
             </div>
-            <div class="products__item swiper-slide">
-              <img src="img/index/layered-choker.jpg" alt="Layered сhoker" width="270" height="284">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp" srcset="img/index/layered-choker.webp 1x, img/index/layered-choker2x.webp 2x">
+                <img src="img/index/layered-choker.jpg" alt="Layered сhoker" width="270" height="284"
+                  srcset="img/index/layered-choker2x.jpg 2x">
+              </picture>
               <p>
                 Layered сhoker
                 <span>$ 115</span>
               </p>
             </div>
-            <div class="products__item swiper-slide">
-              <img src="img/index/gold-chain.jpg" alt="Gold chain" width="270" height="284">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp" srcset="img/index/gold-chain.webp 1x, img/index/gold-chain2x.webp 2x">
+                <img src="img/index/gold-chain.jpg" alt="Gold chain" width="270" height="284"
+                  srcset="img/index/gold-chain2x.jpg 2x">
+              </picture>
               <p>
                 Gold chain
                 <span>$ 215</span>
               </p>
             </div>
-            <div class="products__item swiper-slide">
-              <img src="img/index/galaxy-earrings.jpg" alt="Galaxy earrings" width="270" height="284">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp"
+                  srcset="img/index/galaxy-earrings.webp 1x, img/index/galaxy-earrings2x.webp 2x">
+                <img src="img/index/galaxy-earrings.jpg" alt="Galaxy earrings" width="270" height="284"
+                  srcset="img/index/galaxy-earrings2x.jpg 2x">
+              </picture>
               <p>
                 Galaxy earrings
                 <span>$ 95</span>
               </p>
             </div>
-            <div class="products__item swiper-slide">
-              <img src="img/index/gold-chain.jpg" alt="Gold chain" width="270" height="284">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp" srcset="img/index/gold-chain.webp 1x, img/index/gold-chain2x.webp 2x">
+                <img src="img/index/gold-chain.jpg" alt="Gold chain" width="270" height="284"
+                  srcset="img/index/gold-chain2x.jpg 2x">
+              </picture>
               <p>
                 Gold chain
                 <span>$ 215</span>
               </p>
             </div>
-            <div class="products__item swiper-slide">
-              <img src="img/index/galaxy-earrings.jpg" alt="Galaxy earrings" width="270" height="284">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp"
+                  srcset="img/index/galaxy-earrings.webp 1x, img/index/galaxy-earrings2x.webp 2x">
+                <img src="img/index/galaxy-earrings.jpg" alt="Galaxy earrings" width="270" height="284"
+                  srcset="img/index/galaxy-earrings2x.jpg 2x">
+              </picture>
               <p>
                 Galaxy earrings
                 <span>$ 95</span>
               </p>
             </div>
-            <div class="products__item swiper-slide">
-              <img src="img/index/necklace-ametist.jpg" alt="Necklace with amethyst" width="270" height="284">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp"
+                  srcset="img/index/necklace-ametist.webp 1x, img/index/necklace-ametist2x.webp 2x">
+                <img src="img/index/necklace-ametist.jpg" alt="Necklace with amethyst" width="270" height="284"
+                  srcset="img/index/necklace-ametist2x.jpg 2x">
+              </picture>
               <p>
                 Necklace with amethyst
                 <span>$ 145</span>
               </p>
             </div>
-            <div class="products__item swiper-slide">
-              <img src="img/index/layered-choker.jpg" alt="Layered сhoker" width="270" height="284">
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp" srcset="img/index/layered-choker.webp 1x, img/index/layered-choker2x.webp 2x">
+                <img src="img/index/layered-choker.jpg" alt="Layered сhoker" width="270" height="284"
+                  srcset="img/index/layered-choker2x.jpg 2x">
+              </picture>
+              <p>
+                Layered сhoker
+                <span>$ 115</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp" srcset="img/index/gold-chain.webp 1x, img/index/gold-chain2x.webp 2x">
+                <img src="img/index/gold-chain.jpg" alt="Gold chain" width="270" height="284"
+                  srcset="img/index/gold-chain2x.jpg 2x">
+              </picture>
+              <p>
+                Gold chain
+                <span>$ 215</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp"
+                  srcset="img/index/galaxy-earrings.webp 1x, img/index/galaxy-earrings2x.webp 2x">
+                <img src="img/index/galaxy-earrings.jpg" alt="Galaxy earrings" width="270" height="284"
+                  srcset="img/index/galaxy-earrings2x.jpg 2x">
+              </picture>
+              <p>
+                Galaxy earrings
+                <span>$ 95</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp"
+                  srcset="img/index/necklace-ametist.webp 1x, img/index/necklace-ametist2x.webp 2x">
+                <img src="img/index/necklace-ametist.jpg" alt="Necklace with amethyst" width="270" height="284"
+                  srcset="img/index/necklace-ametist2x.jpg 2x">
+              </picture>
+              <p>
+                Necklace with amethyst
+                <span>$ 145</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <!-- 1x: 270x284px; 2x: 540x568px -->
+              <picture>
+                <source type="image/webp" srcset="img/index/layered-choker.webp 1x, img/index/layered-choker2x.webp 2x">
+                <img src="img/index/layered-choker.jpg" alt="Layered сhoker" width="270" height="284"
+                  srcset="img/index/layered-choker2x.jpg 2x">
+              </picture>
               <p>
                 Layered сhoker
                 <span>$ 115</span>
               </p>
             </div>
           </div>
-          <!-- <div class="pages pages--index">
-                <ul>
-                  <li>
-                    <a href="#" class="pages__active">1</a>
-                  </li>
-                  <li>
-                    <a href="#">2</a>
-                  </li>
-                  <li>
-                    <a href="#">3</a>
-                  </li>
-                  <li>
-                    <a href="#">4</a>
-                  </li>
-                  <li>
-                    <a href="#">5</a>
-                  </li>
-                  <li>
-                    <a href="#">6</a>
-                </ul>
-              </div> -->
+          <div class="swiper-pagination"></div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -218,7 +287,7 @@
           </article>
           <article class="blog__card blog__card--trends">
             <div class="blog__img blog__img--trends"></div>
-            <div class="blog__wrap">
+            <div class="blog__wrap blog__wrap--trends">
               <span>September 16, 2019</span>
               <h3>AW 19 trends</h3>
               <a href="#" class="block-link">Read Article</a>
@@ -271,64 +340,64 @@
     <section class="jewellery">
       <div class="container">
         <h2 class="block-heading">@Chjewellery</h2>
-      <a href="#" class="block-link">Follow Us</a>
-      <ul class="jewellery__list">
-        <li class="jewellery__item">
-          <!-- 1x: 230x230px; 2x: 460x460px -->
-          <picture>
-            <source type="image/webp" srcset="img/index/inst-1.webp 1x, img/index/inst-12x.webp 2x">
-            <img src="img/index/inst-1.jpg" alt="gold-squad-earrings" width="230" height="230"
-              srcset="img/index/inst-12x.jpg 2x">
-          </picture>
-        </li>
-        <li class="jewellery__item">
-          <!-- 1x: 230x150px; 2x: 460x300px -->
-          <picture>
-            <source type="image/webp" srcset="img/index/inst-2.webp 1x, img/index/inst-22x.webp 2x">
-            <img src="img/index/inst-2.jpg" alt="multicolored beads" width="230" height="150"
-              srcset="img/index/inst-22x.jpg 2x">
-          </picture>
-        </li>
-        <li class="jewellery__item">
-          <!-- 1x: 399x412px; 2x: 798x824px -->
-          <picture>
-            <source type="image/webp" srcset="img/index/inst-3.webp 1x, img/index/inst-32x.webp 2x">
-            <img src="img/index/inst-3.jpg" alt="girls with earrings" width="399" height="412"
-              srcset="img/index/inst-32x.jpg 2x">
-          </picture>
-        </li>
-        <li class="jewellery__item jewellery__item--mobile">
-          <!-- 1x: 230x230px; 2x: 460x460px -->
-          <picture>
-            <source type="image/webp" srcset="img/index/inst-4.webp 1x, img/index/inst-42x.webp 2x">
-            <img src="img/index/inst-4.jpg" alt="hand jewelry" width="230" height="230"
-              srcset="img/index/inst-42x.jpg 2x">
-          </picture>
-        </li>
-        <li class="jewellery__item">
-          <!-- 1x: 230x150px; 2x: 460x300px -->
-          <picture>
-            <source type="image/webp" srcset="img/index/inst-5.webp 1x, img/index/inst-52x.webp 2x">
-            <img src="img/index/inst-5.jpg" alt="jewelry set" width="230" height="150"
-              srcset="img/index/inst-52x.jpg 2x">
-          </picture>
-        </li>
-        <li class="jewellery__item jewellery__item--mobile">
-          <!-- 1x: 230x230px; 2x: 460x460px -->
-          <picture>
-            <source type="image/webp" srcset="img/index/inst-6.webp 1x, img/index/inst-62x.webp 2x">
-            <img src="img/index/inst-6.jpg" alt="gold-circle-earrings" width="230" height="230"
-              srcset="img/index/inst-62x.jpg 2x">
-          </picture>
-        </li>
-        <li class="jewellery__item">
-          <!-- 1x: 230x150px; 2x: 460x300px -->
-          <picture>
-            <source type="image/webp" srcset="img/index/inst-7.webp 1x, img/index/inst-72x.webp 2x">
-            <img src="img/index/inst-7.jpg" alt="rings" width="230" height="150" srcset="img/index/inst-72x.jpg 2x">
-          </picture>
-        </li>
-      </ul>
+        <a href="#" class="block-link">Follow Us</a>
+        <ul class="jewellery__list">
+          <li class="jewellery__item">
+            <!-- 1x: 230x230px; 2x: 460x460px -->
+            <picture>
+              <source type="image/webp" srcset="img/index/inst-1.webp 1x, img/index/inst-12x.webp 2x">
+              <img src="img/index/inst-1.jpg" alt="gold-squad-earrings" width="230" height="230"
+                srcset="img/index/inst-12x.jpg 2x">
+            </picture>
+          </li>
+          <li class="jewellery__item">
+            <!-- 1x: 230x150px; 2x: 460x300px -->
+            <picture>
+              <source type="image/webp" srcset="img/index/inst-2.webp 1x, img/index/inst-22x.webp 2x">
+              <img src="img/index/inst-2.jpg" alt="multicolored beads" width="230" height="150"
+                srcset="img/index/inst-22x.jpg 2x">
+            </picture>
+          </li>
+          <li class="jewellery__item">
+            <!-- 1x: 399x412px; 2x: 798x824px -->
+            <picture>
+              <source type="image/webp" srcset="img/index/inst-3.webp 1x, img/index/inst-32x.webp 2x">
+              <img src="img/index/inst-3.jpg" alt="girls with earrings" width="399" height="412"
+                srcset="img/index/inst-32x.jpg 2x">
+            </picture>
+          </li>
+          <li class="jewellery__item jewellery__item--mobile">
+            <!-- 1x: 230x230px; 2x: 460x460px -->
+            <picture>
+              <source type="image/webp" srcset="img/index/inst-4.webp 1x, img/index/inst-42x.webp 2x">
+              <img src="img/index/inst-4.jpg" alt="hand jewelry" width="230" height="230"
+                srcset="img/index/inst-42x.jpg 2x">
+            </picture>
+          </li>
+          <li class="jewellery__item">
+            <!-- 1x: 230x150px; 2x: 460x300px -->
+            <picture>
+              <source type="image/webp" srcset="img/index/inst-5.webp 1x, img/index/inst-52x.webp 2x">
+              <img src="img/index/inst-5.jpg" alt="jewelry set" width="230" height="150"
+                srcset="img/index/inst-52x.jpg 2x">
+            </picture>
+          </li>
+          <li class="jewellery__item jewellery__item--mobile">
+            <!-- 1x: 230x230px; 2x: 460x460px -->
+            <picture>
+              <source type="image/webp" srcset="img/index/inst-6.webp 1x, img/index/inst-62x.webp 2x">
+              <img src="img/index/inst-6.jpg" alt="gold-circle-earrings" width="230" height="230"
+                srcset="img/index/inst-62x.jpg 2x">
+            </picture>
+          </li>
+          <li class="jewellery__item">
+            <!-- 1x: 230x150px; 2x: 460x300px -->
+            <picture>
+              <source type="image/webp" srcset="img/index/inst-7.webp 1x, img/index/inst-72x.webp 2x">
+              <img src="img/index/inst-7.jpg" alt="rings" width="230" height="150" srcset="img/index/inst-72x.jpg 2x">
+            </picture>
+          </li>
+        </ul>
       </div>
     </section>
 

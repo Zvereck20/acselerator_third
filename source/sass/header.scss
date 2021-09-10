@@ -50,6 +50,10 @@
       fill: $excretion-color;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 49px;
+  }
 }
 
 
@@ -63,11 +67,16 @@
     width: 25px;
     height: 20px;
     top: 43px;
-    left: 39px;
+    left: 38px;
     border: none;
     cursor: pointer;
     background-color: inherit;
     outline: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 26px;
+    left: 9px;
   }
 }
 
@@ -178,7 +187,7 @@
 
   @media (max-width: $mobile-width) {
     top: 33px;
-    left: 64%;
+    left: 67%;
 
     svg {
       width: 52px;
