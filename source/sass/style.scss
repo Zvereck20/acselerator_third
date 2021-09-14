@@ -4,6 +4,15 @@
 @import "global/variables.scss";
 @import "global/global.scss";
 
+// Swiper
+
+@import "swiper/swiper-vars.scss";
+@import "swiper/swiper.scss";
+@import "swiper/pagination.scss";
+
+// Pages
+
+@import "spreading-page.scss";
 @import "header.scss";
 @import "purchases.scss";
 @import "navigation.scss";
@@ -11,7 +20,7 @@
 @import "heading.scss";
 @import "sidebar.scss";
 @import "products.scss";
-@import "swiper.scss";
+@import "swiper-root.scss";
 @import "pages.scss";
 @import "blog.scss";
 @import "question.scss";

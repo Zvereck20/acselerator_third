@@ -52,7 +52,7 @@ a {
 }
 
 .block-heading {
-  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-family: "Cormorant Garamond", "Verdana", sans-serif;
   font-size: 34px;
   letter-spacing: 0.03em;
   text-align: center;
@@ -104,10 +104,10 @@ button {
   }
 }
 
-.accordion .question__text {
+.accordion p {
   display: block;
 }
 
-.accordion--close .question__text {
+.accordion--close p {
   display: none;
 }

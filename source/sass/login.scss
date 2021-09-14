@@ -5,7 +5,7 @@
   background-color: $blog-background;
   left: 50%;
   transform: translate(-50%);
-  box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
 
   img {
     width: 100%;
@@ -14,7 +14,7 @@
 
   h2 {
     margin-top: 46px;
-    font-family: "Cormorant Garamond", "Arial", sans-serif;
+    font-family: "Cormorant Garamond", "Verdana", sans-serif;
     font-size: 34px;
     line-height: 130%;
     color: $text-color;
@@ -58,7 +58,6 @@
     background-color: $blog-background;
     border: none;
     border-bottom: 1px solid $text-color;
-    -webkit-appearance: none;
     border-radius: 0;
     transition-duration: 0.3s;
 

@@ -159,7 +159,7 @@
     width: 270px;
 
     .wrap {
-      padding-bottom: 0px;
+      padding-bottom: 0;
     }
   }
 }
@@ -248,7 +248,7 @@
       padding-bottom: 18px;
     }
 
-    input+label::before {
+    input + label::before {
       width: 18px;
       height: 17px;
     }
@@ -285,6 +285,8 @@
   }
 
   label {
+    padding-top: 14px;
+    margin-left: -6px;
     padding-left: 0;
     padding-bottom: 0;
     flex-basis: auto;
@@ -310,11 +312,6 @@
 
   input + label:last-of-type::before {
     left: 10px;
-  }
-
-  label {
-    padding-top: 14px;
-    margin-left: -6px;
   }
 
   @media (max-width: $tablet-width) {
