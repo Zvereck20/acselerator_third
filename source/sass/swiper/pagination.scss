@@ -66,6 +66,7 @@
   width: 8px;
   height: 8px;
   display: inline-block;
+  vertical-align: baseline;
   border-radius: 50%;
   background: #000000;
   opacity: 0.2;
@@ -114,6 +115,7 @@
 
       .swiper-pagination-bullet {
         display: inline-block;
+        vertical-align: baseline;
         transition: 200ms transform, 200ms top;
       }
     }
