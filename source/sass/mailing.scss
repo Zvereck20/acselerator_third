@@ -18,14 +18,19 @@
     border-bottom: 1px solid $main-color;
   }
 
+  label {
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+
   input {
+    width: 100%;
     background-color: $footer-background;
     border: none;
     color: $main-color;
     transition-duration: 0.3s;
 
-    &:hover,
-    &:active {
+    &:hover {
       transform: scale(1.1, 1.1);
     }
   }

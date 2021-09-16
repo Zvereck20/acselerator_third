@@ -5,6 +5,7 @@
     background-image: url("../img/index/header-bc_desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: $excretion-color;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/header-bc_desktop2x.png");
@@ -27,6 +28,7 @@
     background-image: url("../img/catalog/header-bc_desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: $excretion-color;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/catalog/header-bc_desktop2x.png");

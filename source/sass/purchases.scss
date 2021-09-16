@@ -5,7 +5,7 @@
 
   a {
     display: inline-block;
-    padding-left: 35px;
+    margin-left: 35px;
     vertical-align: baseline;
     transition-duration: 0.3s;
 
@@ -29,7 +29,7 @@
     order: 2;
 
     a {
-      padding-left: 0;
+      margin-left: 0;
       padding-top: 6px;
       display: block;
       font-size: 18px;

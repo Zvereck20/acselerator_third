@@ -73,6 +73,10 @@
         },
       },
       768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
+
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -138,8 +142,6 @@
   accordionToggle.forEach((toggle) => {
     toggle.addEventListener('click', () => {
 
-      emergenceToggle();
-
       const parent = toggle.parentNode;
 
       if (parent.classList.contains('accordion--close')) {
@@ -151,8 +153,6 @@
       }
 
       if (parent.classList.contains('accordion--close')) {
-        accordion.forEach((item) =>
-          item.classList.add('accordion--close'));
         parent.classList.remove('accordion--close');
       } else {
         parent.classList.add('accordion--close');
@@ -162,8 +162,6 @@
 
   hiddenToggle.forEach((toggle) => {
     toggle.addEventListener('click', () => {
-
-      emergenceHidden();
 
       const parent = toggle.parentNode;
 
@@ -176,8 +174,6 @@
       }
 
       if (parent.classList.contains('sidebar__checkbox--close')) {
-        hidden.forEach((item) =>
-          item.classList.add('sidebar__checkbox--close'));
         parent.classList.remove('sidebar__checkbox--close');
       } else {
         parent.classList.add('sidebar__checkbox--close');
@@ -287,19 +283,12 @@
     focusLock.off(modal);
   });
 
-  LOGIN_FORM.addEventListener('submit', (evt) => {
-    evt.preventDefault();
+  LOGIN_FORM.addEventListener('submit', () => {
 
     localStorage.setItem('login_email', LOGIN_EMAIL.value);
     LOGIN_EMAIL.value = '';
     LOGIN_PASSWORD.value = '';
 
-    modal.classList.add('visually-hidden');
-
-    if (existVerticalScroll()) {
-      body.classList.remove('body-lock')
-      window.scrollTo(0, body.dataset.scrollY)
-    };
   });
 
   // Checkbox

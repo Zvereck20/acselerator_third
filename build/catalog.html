@@ -7,11 +7,11 @@
   <meta name="description" content="Печатные платы">
   <title>HTML Academy: Акселератор</title>
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font">
-  <link rel="preload" href="fonts/poppins-nedium.woff2" as="font">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font">
   <link rel="preload" href="fonts/poppins-bold.woff2" as="font">
-  <link rel="preload" href="fonts/cormorantGaramond-semibold.woff2" as="font">
-  <link rel="preload" href="fonts/cormorantGaramond-bold.woff2" as="font">
-  <link rel="preload" href="fonts/cormorantGaramond-boldItalic.woff2" as="font">
+  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font">
+  <link rel="preload" href="fonts/cormorantgaramond-boldItalic.woff2" as="font">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -315,7 +315,7 @@
         <form class="wrap">
           <label>
             <span class="visually-hidden">E-mail</span>
-            <input type="email" placeholder="Your E-mail">
+            <input type="email" placeholder="Your E-mail" required="">
           </label>
           <button type="submit">Sign Up
             <svg width="30" height="11" viewBox="0 0 30 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -397,11 +397,11 @@
       <form method="GET" action="#" class="login__field">
         <label for="login-email">
           <span class="visually-hidden">Login e-mail</span>
-          <input type="email" id="login-email" name="login-email" placeholder="Your E-mail">
+          <input type="email" id="login-email" name="login-email" placeholder="Your E-mail" required="">
         </label>
         <label for="login-password">
           <span class="visually-hidden">Login password</span>
-          <input type="password" id="login-password" name="login-password" placeholder="Password">
+          <input type="password" id="login-password" name="login-password" placeholder="Password" required="">
         </label>
         <button class="login__button" type="submit">Log In</button>
       </form>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-bottom_icon" viewBox="0 0 17 10">
 <path d="M1 1L8.5 9L16 1" stroke="#A87B62"/>
 </symbol><symbol id="arrow-left_icon" viewBox="0 0 30 11">
-<path d="M30 5.5L1 5.5M1 5.5L6.48649 10M1 5.5L6.48649 1" stroke="#A87B62"/>
+<path d="M30 5.5L1 5.5M1 5.5L6.48649 10M1 5.5L6.48649 1"/>
 </symbol><symbol id="arrow-right_icon" viewBox="0 0 30 11">
-<path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10" stroke="#A87B62"/>
+<path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10"/>
 </symbol><symbol id="arrow-top_icon" viewBox="0 0 17 10">
 <path d="M16 9L8.5 1L1 9" stroke="#A87B62"/>
 </symbol><symbol id="cart_icon" viewBox="0 0 20 18">

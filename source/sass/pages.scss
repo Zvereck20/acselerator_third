@@ -84,9 +84,13 @@ li .pages__active {
   transition-duration: 0.3s;
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     transform: scale(1.1, 1.1);
+  }
+
+  &:focus {
+    outline: 1px solid $excretion-color;
+    border-radius: 10px;
   }
 
   &--previos {
