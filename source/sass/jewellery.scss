@@ -1,6 +1,10 @@
 .jewellery {
-  padding-top: 95px;
+  padding-top: 89px;
   padding-bottom: 110px;
+
+  .container {
+    padding: 0 20px;
+  }
 
   .block-heading {
     margin-bottom: 41px;
@@ -11,8 +15,12 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 57px;
-    padding-bottom: 58px;
+    padding-top: 53px;
+    padding-bottom: 57px;
+
+    .container {
+      padding: 0 45px;
+    }
 
     .block-heading {
       margin-bottom: 32px;
@@ -21,7 +29,11 @@
 
   @media (max-width: $mobile-width) {
     padding-top: 41px;
-    padding-bottom: 48px;
+    padding-bottom: 51px;
+
+    .container {
+      padding: 0 15px;
+    }
   }
 }
 
