@@ -72,6 +72,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    max-width: 520px;
     height: 512px;
     min-height: none;
     margin-bottom: 10px;
