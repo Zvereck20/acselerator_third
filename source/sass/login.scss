@@ -63,7 +63,7 @@
 
     &:hover,
     &:active {
-      transform: scale(1.1, 1.1);
+      opacity: 0.6;
     }
 
     &::placeholder {

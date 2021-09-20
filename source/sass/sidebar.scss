@@ -139,6 +139,7 @@
     font-size: 14px;
     line-height: 130%;
     color: $text-color;
+    cursor: pointer;
   }
 
   @media (max-width: $tablet-width) {
@@ -201,7 +202,7 @@
     &:hover,
     &:active,
     &:focus {
-      transform: scale(1.1, 1.1);
+      opacity: 0.6;
     }
   }
 
@@ -372,6 +373,10 @@
       padding-right: 40px;
     }
   }
+}
+
+.sidebar__container {
+  flex-basis: 100%;
 }
 
 .sidebar__button {
